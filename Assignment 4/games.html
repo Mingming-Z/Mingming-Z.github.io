@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mingming's Game World</title>
+    <style>
+           html, body {
+            margin:20px; 
+            padding:0px;
+            font-family: Helvetica, sans-serif;
+            background-color:grey;
+        }
+           .container {
+            width: 80%;
+            margin: auto;
+        }
+           #header, #footer, #main {
+            border: .1px salmon solid;
+            border-width: 4pt;
+            margin-bottom: 10px;
+        }
+           #nav {
+            text-align: center;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 27px;
+            color:black;
+        }
+           #main {
+            float:right;
+            width:80%;
+            box-sizing:border-box;
+        }
+           #sidebar {
+            float:left;
+            width:18%;
+            box-sizing:border-box;
+            border: .1px black solid;
+            padding:10px;
+            padding-bottom: 40px;
+        }
+           .game {
+            color:black;
+            background-color:;
+        }
+           #footer {
+            text-align: center;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 24px;
+            color:black;
+            margin-top: 38%;
+        }
+           form#login #submitBtn {
+            margin-left:75pt;
+            padding:10px 10px;
+        }
+           .form-group label {
+            display:block;
+            margin-left:5px;
+            font-size: 25px;
+        }
+           .well {
+            border:salmon solid .75px;
+        }
+           .game {
+            color: salmon;
+        }
+    </style>
+</head>
+<body>
+    <div class='container'>
+    <div id='header'>
+        <div id='nav'>
+            <h1>Word/Math Puzzle Game</h1>
+        </div>
+    </div>
+    <div id='main'>
+        <form id='login'>
+                <h2>GAME1</h2>
+                <div class='game'>
+                    <h1>C_NG_AD_ATI_N=?</h1>
+                </div>
+                <label>
+                    Enter the whole word:
+                </label>
+                <input type='answer' name='answer'>
+                <button id='submitBtn' type='submit'>Send</button>
+        </form>
+        <form id='login'>
+            <h2>GAME2</h2>
+            <div class='game'>
+                <div class="well">
+                   <p id="demo">Here can see the answer</p>
+                </div>
+            <button type="button" class="btn btn-primary" onclick="ask_for_x_n_y();">X * Y = ?</button>
+            </div>
+        </form>
+    </div>
+    <div id='sidebar'>
+        <form id='login'>
+            <div class='form-group'>
+                <label>
+                    Nickname:
+                </label>
+                <input type='text' name='username'>
+            </div>
+            <button id='submitBtn' type='submit'>Send</button>
+        </form>   
+    </div>
+    <div class='clr'></div>
+    <div id='footer'>
+        <h1>Welcome to Mingming's Game World</h1>
+    </div>
+    </div>
+    <script>
+        function sayHello() {
+         var answer = document.forms[0].answer.value;
+         if (answer == 'congraduation') {alert("That is correct");} else {alert("That is incorrect");}
+        }
+        document.getElementById('submitBtn').addEventListener('click', sayHello);
+        
+        function compute_x_multiple_y(x,y) {
+           var z = 0;
+           x = parseInt(x);
+           y = parseInt(y);
+           z = x * y;
+           return z;
+           }
+          function ask_for_x_n_y() {
+             var x = prompt("Enter x value");
+             var y = prompt("Enter y value");
+             var z = compute_x_multiple_y(x,y);
+             var x = document.getElementById("demo");
+             x.style.fontSize = "25px";
+             x.style.color = "salmon";
+             document.getElementById("demo").innerHTML = "The answer is " + z;
+            }
+    </script>
+    <script>
+        function sayHello() {
+           var username = document.forms[0].username.value;
+           alert("Hello " + username + "! Time to Play" + '!');
+        }
+        document.getElementById('submitBtn').addEventListener('click', sayHello);
+    </script>
+</body>
+</html>
