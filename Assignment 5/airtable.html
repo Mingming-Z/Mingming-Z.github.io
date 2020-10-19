@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>NBA_2014</title>
+    <style>
+        .box{
+             border-radius: 20px;
+             width: 800px;
+             height: 300px;
+             margin: auto;
+             position: absolute;
+             top: 0;
+             left: 0;
+             right: 0;
+             bottom: 0;
+        }
+    </style>
+</head>
+<body> 
+    <!--selecter-->
+    <div>
+        <form>
+            <select id="selecter" class="form-control" onchange="table();">
+                <option value selected>Please select category</option>
+                <option value='0'>Category by Teams</option>
+                <option value='1'>Category by Years</option>
+                <option value='2'>Category by Colleges</option>
+            </select>
+        </form>
+        <!--airtable-->
+        <div id="table">
+                <iframe id="iframe" class="airtable-embed" src="https://airtable.com/embed/shrfxHOvYGUXdvVga?backgroundColor=green&viewControls=on" frameborder="0" onmousewheel="" width="100%" height="533" style="background: transparent; border: 1px solid #ccc;"></iframe>
+                <iframe id="iframe" class="airtable-embed" src="https://airtable.com/embed/shraG2P0rqlu4ucdk?backgroundColor=green&viewControls=on" frameborder="0" onmousewheel="" width="100%" height="533" style="background: transparent; border: 1px solid #ccc;"></iframe>
+                <iframe id="iframe" class="airtable-embed" src="https://airtable.com/embed/shrgjCLELQLB0Jf8A?backgroundColor=green&viewControls=on" frameborder="0" onmousewheel="" width="100%" height="533" style="background: transparent; border: 1px solid #ccc;"></iframe>
+        </div>
+        <script>
+            function table(){
+            var selecter = document.getElementById("selecter");
+                            if (selecter.value==="0"){document.getElementById("iframe").src="https://airtable.com/embed/shrfxHOvYGUXdvVga?backgroundColor=green&viewControls=on"};
+                            if (selecter.value==="1"){document.getElementById("iframe").src="https://airtable.com/embed/shraG2P0rqlu4ucdk?backgroundColor=green&viewControls=on"};
+                            if (selecter.value==="2"){document.getElementById("iframe").src="https://airtable.com/embed/shrgjCLELQLB0Jf8A?backgroundColor=green&viewControls=on"};}
+        </script>
+    </div>
+</body>
+</html>
