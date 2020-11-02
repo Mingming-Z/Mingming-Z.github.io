@@ -1,0 +1,97 @@
+body {
+    background-color: grey;
+    font-family: Helvetica Neue;
+}
+    ul.navbar {
+        text-align: center;
+        font-size: 27px;
+        background: lightblue;
+        border-style: groove;
+        border-color:lightblue;
+    }
+    ul.navbar1 {
+        font-size: 20px;
+    }
+    ul.navbar a {
+        background:white;
+        border-style: outset;
+        border-color: white;
+        text-decoration: none;
+        padding:5px}
+      a:link {
+        color: blue }
+      a:visited {
+        color: black;
+    }
+    ul.navbar1 a {
+        background:white;
+        border-style: outset;
+        border-color: white;
+        text-decoration: none;
+        }
+      a:link {
+        color: blue }
+      a:visited {
+        color: black;
+    }
+    .designcodeline{
+        background: whitesmoke;
+        font-size: 10px;
+        font-style: italic;
+        color: gray;
+    }
+    .designcodeline p{
+        padding: 5px;
+    }
+    .title{
+        background:rgb(16, 81, 107);
+    }
+    .title h1{
+        color:white;
+        padding:10px;
+    }
+    .article p {
+        padding:20px;
+    }
+    #main h2 {
+        padding:20px;
+    }
+    .courses {
+        margin:15px;
+        color: rgb(16, 81, 107);
+    }
+    #main {
+        margin: 15px;
+        box-sizing:border-box;
+        border:1px;
+        border-style: solid;
+        border-left-color:lightblue;
+        border-right-color: lightblue;
+    }
+    .wrapper{
+        display:grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+    .card-body h6{
+        color: grey;
+    }
+    @media screen and (max-width:1500px) {
+        #first-column{
+            width:100%;
+            display:block;
+        }
+        #second-column{
+            width:100%;
+            display:none;
+        }
+    }
+    @media screen and (max-width: 550px) {
+        #first-column{
+            width:100%;
+            display:none;
+        }
+        #second-column{
+            width:100%;
+            display:block;
+        }
+    }
